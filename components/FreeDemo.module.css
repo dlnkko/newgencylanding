@@ -1,0 +1,130 @@
+.freeDemo {
+  background: var(--color-black);
+}
+
+.formContainer {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.demoForm {
+  background: var(--color-dark-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.formGroup label {
+  color: var(--color-gold);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.formGroup input {
+  padding: 1rem;
+  background: var(--color-dark);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  color: var(--color-white);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.formGroup input:focus {
+  outline: none;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.1);
+}
+
+.formGroup input::placeholder {
+  color: var(--color-text-dark);
+}
+
+.optionButtons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.optionButton {
+  flex: 1;
+  min-width: 150px;
+  padding: 1rem 1.5rem;
+  background: var(--color-dark);
+  border: 2px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  color: var(--color-text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+.optionButton:hover {
+  border-color: var(--color-gold);
+  background: rgba(212, 175, 55, 0.1);
+}
+
+.optionButton.active {
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
+  color: var(--color-black);
+  border-color: var(--color-gold);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.submitButton {
+  width: 100%;
+  margin-top: var(--spacing-sm);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.successMessage,
+.errorMessage {
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: var(--spacing-sm);
+}
+
+.successMessage {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.5);
+}
+
+.errorMessage {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.5);
+}
+
+@media (max-width: 768px) {
+  .demoForm {
+    padding: var(--spacing-md);
+  }
+  
+  .optionButtons {
+    flex-direction: column;
+  }
+  
+  .optionButton {
+    width: 100%;
+  }
+}
+
+

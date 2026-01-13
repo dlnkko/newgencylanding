@@ -1,0 +1,32 @@
+📹 DÓNDE COLOCAR TUS VIDEOS MP4
+================================
+
+Coloca tus videos verticales en esta carpeta con estos nombres EXACTOS:
+
+📁 Ubicación: public/assets/video/
+
+📝 Nombres de archivos:
+   - carousel-1.mp4
+   - carousel-2.mp4
+   - carousel-3.mp4
+   - carousel-4.mp4
+   - carousel-5.mp4
+
+✅ ESPECIFICACIONES RECOMENDADAS:
+   - Formato: MP4 (codec H.264)
+   - Orientación: VERTICAL (9:16 aspect ratio)
+   - Resolución: 1080x1920px (Full HD vertical)
+   - Duración: 15-60 segundos (recomendado)
+   - Sin audio o con audio que pueda estar en mute
+   - Tamaño de archivo: Optimizado para web (preferiblemente < 10MB por video)
+
+💡 NOTA IMPORTANTE:
+   - Los videos se reproducirán AUTOMÁTICAMENTE
+   - Cuando termine un video, pasará automáticamente al siguiente
+   - Los videos deben estar en formato vertical (9:16) para verse correctamente
+   - Si no colocas los videos, se mostrarán placeholders
+
+🔧 Para agregar más videos:
+   Edita el archivo: components/VideoCarousel.tsx
+   Agrega más rutas al array 'videos'
+

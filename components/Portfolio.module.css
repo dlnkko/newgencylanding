@@ -1,0 +1,121 @@
+.portfolio {
+  background: var(--color-dark);
+}
+
+.portfolioGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.portfolioItem {
+  background: var(--color-dark-gray);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.portfolioItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.portfolioImageContainer {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+}
+
+.portfolioImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.portfolioPlaceholder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-gray);
+  z-index: -1;
+}
+
+.portfolioItem:hover .portfolioImage {
+  transform: scale(1.1);
+}
+
+.portfolioOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.portfolioItem:hover .portfolioOverlay {
+  opacity: 1;
+}
+
+.portfolioBtn {
+  background: var(--color-gold);
+  color: var(--color-black);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.portfolioBtn:hover {
+  transform: scale(1.05);
+}
+
+.portfolioVideoContainer {
+  background: var(--color-dark-gray);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.portfolioVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: var(--color-gray);
+  min-height: 300px;
+}
+
+.portfolioInfo {
+  padding: var(--spacing-md);
+}
+
+.portfolioInfo h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-xs);
+}
+
+.portfolioInfo p {
+  color: var(--color-text-dark);
+}
+
+@media (max-width: 768px) {
+  .portfolioGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+

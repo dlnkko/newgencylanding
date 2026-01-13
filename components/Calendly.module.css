@@ -1,0 +1,35 @@
+.calendlySection {
+  background: var(--color-dark);
+  min-height: 800px;
+}
+
+.calendlyContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--spacing-md) 0;
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--color-dark-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+.calendlyContainer :global(.calendly-inline-widget) {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .calendlyContainer {
+    padding: var(--spacing-sm) 0;
+  }
+  
+  .calendlyContainer :global(.calendly-inline-widget) {
+    min-width: 100% !important;
+    height: 600px !important;
+  }
+}
+
+

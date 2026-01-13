@@ -1,0 +1,26 @@
+.ctaSection {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), rgba(0, 0, 0, 0.9));
+  text-align: center;
+  padding: var(--spacing-xl) 0;
+}
+
+.ctaContent {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.ctaTitle {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: var(--spacing-sm);
+}
+
+.ctaSubtitle {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-md);
+}
+
+
+

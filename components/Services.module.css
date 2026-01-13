@@ -1,0 +1,112 @@
+.services {
+  background: var(--color-dark);
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-md);
+}
+
+.serviceCard {
+  background: var(--color-dark-gray);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 16px;
+  padding: var(--spacing-md);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.serviceCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.serviceCard:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-gold);
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.2);
+}
+
+.serviceCard:hover::before {
+  opacity: 1;
+}
+
+.serviceIcon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.serviceTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-gold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.serviceDescription {
+  color: var(--color-text-dark);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.8;
+}
+
+.serviceFeatures {
+  list-style: none;
+}
+
+.serviceFeatures li {
+  color: var(--color-text);
+  padding: var(--spacing-xs) 0;
+  position: relative;
+  padding-left: var(--spacing-md);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.serviceFeatures li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+  font-weight: bold;
+}
+
+.priceButton {
+  display: block;
+  width: 100%;
+  margin-top: var(--spacing-md);
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
+  color: var(--color-black);
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.priceButton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.5);
+}
+
+@media (max-width: 768px) {
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
