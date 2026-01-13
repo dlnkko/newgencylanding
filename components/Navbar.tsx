@@ -36,7 +36,7 @@ export default function Navbar() {
           <ul className={styles.navLinks}>
             <li><a href="#inicio" onClick={(e) => { e.preventDefault(); scrollToSection('inicio') }}>Home</a></li>
             <li><a href="#servicios" onClick={(e) => { e.preventDefault(); scrollToSection('servicios') }}>Services</a></li>
-            <li><a href="#book-call" onClick={(e) => { e.preventDefault(); scrollToSection('book-call') }}>Book a Call</a></li>
+            <li><a href="#servicios" onClick={(e) => { e.preventDefault(); scrollToSection('servicios') }}>I'm In!</a></li>
             <li><a href="#video-carousel" onClick={(e) => { e.preventDefault(); scrollToSection('video-carousel') }}>Portfolio</a></li>
           </ul>
           <button 

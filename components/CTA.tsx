@@ -8,7 +8,7 @@ export default function CTA() {
   const telegramUrl = `https://t.me/${telegramUsername}`
 
   return (
-    <section className={styles.ctaSection}>
+    <section className={styles.ctaSection} id="cta-section">
       <div className="container">
         <ScrollReveal>
           <div className={styles.ctaContent}>

@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Enviar al webhook de n8n
-    const webhookUrl = 'https://dlnkkoo.app.n8n.cloud/webhook-test/610e88d8-14ff-4bfc-bc48-0e94eb39b1a9'
+    const webhookUrl = 'https://dlnkkoo.app.n8n.cloud/webhook/610e88d8-14ff-4bfc-bc48-0e94eb39b1a9'
     
     const webhookData = {
       email,
@@ -34,13 +34,27 @@ export async function POST(request: NextRequest) {
         body: JSON.stringify(webhookData),
       })
 
+      const responseText = await webhookResponse.text()
+      
       if (!webhookResponse.ok) {
-        console.error('Error enviando al webhook:', webhookResponse.statusText)
+        console.error('❌ Error enviando al webhook:', {
+          status: webhookResponse.status,
+          statusText: webhookResponse.statusText,
+          response: responseText,
+          url: webhookUrl
+        })
       } else {
-        console.log('✅ Solicitud enviada al webhook exitosamente')
+        console.log('✅ Solicitud enviada al webhook exitosamente:', {
+          status: webhookResponse.status,
+          response: responseText
+        })
       }
     } catch (webhookError) {
-      console.error('Error al enviar al webhook:', webhookError)
+      console.error('❌ Error al enviar al webhook:', {
+        error: webhookError instanceof Error ? webhookError.message : String(webhookError),
+        url: webhookUrl,
+        data: webhookData
+      })
       // Continuamos aunque falle el webhook para no bloquear la respuesta
     }
 

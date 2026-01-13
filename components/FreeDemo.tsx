@@ -103,9 +103,9 @@ export default function FreeDemo() {
       <div className="container">
         <ScrollReveal>
           <div className="section-header">
-            <h2 className="section-title">Request Your Free Demo</h2>
-            <p className="section-subtitle">
-              Fill out the form and we'll show you how we can help you
+            <h2 className="section-title">Don't believe it? Let us show you. Claim your free demo</h2>
+            <p className={styles.demoSubtitle}>
+              It won't be the last for sure
             </p>
           </div>
         </ScrollReveal>
@@ -224,7 +224,7 @@ export default function FreeDemo() {
                 className={`btn-primary ${styles.submitButton}`}
                 disabled={isSubmitting}
               >
-                {isSubmitting ? 'Sending...' : 'Submit Request'}
+                {isSubmitting ? 'Sending...' : 'Get me my demo!'}
               </button>
 
               {submitStatus === 'success' && (

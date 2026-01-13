@@ -47,26 +47,12 @@ export default function Hero() {
               One $1K video hoping it works, or 20 variants testing what actually converts? Easy choice.
             </p>
             <div className={styles.heroButtons}>
-              <button className="btn-primary" onClick={() => scrollToSection('book-call')}>
-                Book a call
+              <button className="btn-primary" onClick={() => scrollToSection('servicios')}>
+                I'm In!
               </button>
               <button className="btn-secondary" onClick={() => scrollToSection('free-demo')}>
                 Free Demo
               </button>
-            </div>
-            <div className={styles.heroStats}>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>10K+</span>
-                <span className={styles.statLabel}>Ads Generated</span>
-              </div>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>500+</span>
-                <span className={styles.statLabel}>Happy Clients</span>
-              </div>
-              <div className={styles.stat}>
-                <span className={styles.statNumber}>95%</span>
-                <span className={styles.statLabel}>Conversion Rate</span>
-              </div>
             </div>
           </ScrollReveal>
         </div>

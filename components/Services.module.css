@@ -16,6 +16,14 @@
   transition: var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.serviceCard > * {
+  position: relative;
+  z-index: 1;
 }
 
 .serviceCard::before {
@@ -28,6 +36,8 @@
   background: linear-gradient(135deg, rgba(212, 175, 55, 0.1), transparent);
   opacity: 0;
   transition: var(--transition);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .serviceCard:hover {
@@ -60,6 +70,8 @@
 
 .serviceFeatures {
   list-style: none;
+  flex-grow: 1;
+  margin-bottom: var(--spacing-md);
 }
 
 .serviceFeatures li {
@@ -82,7 +94,7 @@
 .priceButton {
   display: block;
   width: 100%;
-  margin-top: var(--spacing-md);
+  margin-top: auto;
   padding: 1rem 2rem;
   background: linear-gradient(135deg, var(--color-gold-dark), var(--color-gold));
   color: var(--color-black);
@@ -95,6 +107,8 @@
   cursor: pointer;
   transition: var(--transition);
   box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+  position: relative;
+  z-index: 2;
 }
 
 .priceButton:hover {

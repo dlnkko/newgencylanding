@@ -45,7 +45,7 @@ const services = [
       '2 Revisions per video',
       'Delivery: Organized Google Drive folder'
     ],
-    price: '$2,400 USD / month'
+    price: '$3,000 USD'
   }
 ]
 
@@ -72,9 +72,18 @@ export default function Services() {
                   ))}
                 </ul>
                 <a
-                  href={telegramUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="#cta-section"
+                  onClick={(e) => {
+                    e.preventDefault()
+                    const element = document.getElementById('cta-section')
+                    if (element) {
+                      const offsetTop = element.offsetTop - 80
+                      window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                      })
+                    }
+                  }}
                   className={styles.priceButton}
                 >
                   {service.price}
